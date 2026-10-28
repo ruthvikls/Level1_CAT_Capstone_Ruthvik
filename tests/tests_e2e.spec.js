@@ -69,18 +69,16 @@ test('Add Or Remove Products from Cart', async ({ loginPage, productsPage, cartP
   await cartPage.removeProduct(data.products.name);
   await expect(cartPage.emptyCartMessage).toBeVisible();
 });
-
+ //Authenticated tests using Stoge State (authFile) to avoid logging in for each test 
 test.describe('Tests requiring login using Storage State', () => {
   test.use({ storageState: authFile });
   test.beforeEach(async ({ page }) => {
     await page.goto(data.baseUrl);
   });
 
-  // Put the three authenticated tests in this block.
-  
+ 
 test('Product search returns relevant results', async ({ loginPage, productsPage }) => {
-  // await loginPage.open(data.baseUrl);
-  // await loginPage.login(data.users.valid.email, data.users.valid.password);
+  
   await expect(loginPage.loggedInUser).toContainText(data.users.valid.username);
 
   await productsPage.open();
@@ -96,15 +94,12 @@ test('Product search returns relevant results', async ({ loginPage, productsPage
   }
 });
 
-
 test('Add Products to Cart and Place Order', async ({
   loginPage,
   productsPage,
   cartPage,
   checkoutPage,
 }) => {
-  // await loginPage.open(data.baseUrl);
-  // await loginPage.login(data.users.valid.email, data.users.valid.password);
   await expect(loginPage.loggedInUser).toContainText(data.users.valid.username);
 
   await cartPage.clearCart();
@@ -142,8 +137,6 @@ test('Add Products to Cart and Place Order', async ({
 });
 
 test('Contact us form validation', async ({ page, loginPage, contactUsPage }) => {
-  // await loginPage.open(data.baseUrl);
-  // await loginPage.login(data.users.valid.email, data.users.valid.password);
   await expect(loginPage.loggedInUser).toContainText(data.users.valid.username);
 
   await contactUsPage.open();
@@ -160,7 +153,5 @@ test('Contact us form validation', async ({ page, loginPage, contactUsPage }) =>
 
 await expect(contactUsPage.successMessage).toHaveText(data.contact.successMessage,);
 });
-
-
 });
 
