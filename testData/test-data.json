@@ -1,0 +1,70 @@
+{
+  "baseUrl": "https://automationexercise.com/",
+  "users": {
+    "valid": {
+      "email": "marshallspringfield@gmail.com",
+      "password": "hello@123",
+      "username": "marshall springfield"
+    },
+    "cartTest": {
+      "email": "steverogers@gmail.com",
+      "password": "avengers.15",
+      "username": "Steve"
+    },
+    "invalid": {
+      "email": "marsgfield@gmail.com",
+      "password": "hel123"
+    }
+  },
+  "registration": {
+    "name": "Steve",
+    "emailPrefix": "steverogers",
+    "emailDomain": "@gmail.com",
+    "account": {
+      "password": "avengers.15",
+      "title": "Mr.",
+      "birthDay": "12",
+      "birthMonth": "11",
+      "birthYear": "2010",
+      "firstName": "Steve",
+      "lastName": "Rogers",
+      "address": "Avengers Tower",
+      "state": "California",
+      "city": "Los Angeles",
+      "zipCode": "90001",
+      "mobileNumber": "6646646646"
+    }
+  },
+  "products": {
+    "searchTerm": "jeans",
+    "category": "Jeans",
+    "name": "Regular Fit Straight Jeans"
+  },
+  "checkout": {
+    "comment": "Please deliver during business hours.",
+    "payment": {
+      "nameOnCard": "Marshall Springfield",
+      "cardNumber": "4111111111111111",
+      "cvc": "565",
+      "expiryMonth": "04",
+      "expiryYear": "2030"
+    },
+    "headings": {
+      "addressDetails": "Address Details",
+      "reviewOrder": "Review Your Order"
+    },
+    "confirmationMessage": "Congratulations! Your order has been confirmed!"
+  },
+  "contact": {
+    "name": "marshall springfield",
+    "email": "marshallspringfield@gmail.com",
+    "subject": "Contact form test",
+    "message": "This is a test contact message.",
+    "successMessage": "Success! Your details have been submitted successfully."
+  },
+  "messages": {
+    "invalidLogin": "Your email or password is incorrect!",
+    "accountCreated": "Account Created!",
+    "emptyCart": "Cart is empty!"
+  }
+}
